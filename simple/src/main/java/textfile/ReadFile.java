@@ -1,6 +1,8 @@
 package textfile;
 import java.io.File;
+import java.io.FileDescriptor;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -12,10 +14,10 @@ import java.util.Map.Entry;
 import java.util.Scanner;
 public class ReadFile {
 	public static void main(String [] args) throws FileNotFoundException {
-	    PrintStream p = new PrintStream(System.out);
-		File f = new File("C:\\\\Users\\\\Janani S\\\\Documents\\\\word.txt");
+		PrintStream p=new PrintStream((new FileOutputStream(FileDescriptor.out)));
+		String path = "C:\\\\Users\\\\Janani S\\\\Documents\\\\word.txt";
+		File f = new File(path);
 		HashMap<String,Integer> h = new HashMap<String,Integer>();
-		
 		Scanner s = new Scanner(f);
 		while(s.hasNextLine()) {
 			String w = s.next();
