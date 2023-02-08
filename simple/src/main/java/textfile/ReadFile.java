@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class ReadFile {
 	public static void main(String [] args) throws FileNotFoundException {
 		PrintStream p=new PrintStream((new FileOutputStream(FileDescriptor.out)));
-		String path = "C:\\\\Users\\\\Janani S\\\\Documents\\\\word.txt";
+		final String path = "C:\\\\Users\\\\Janani S\\\\Documents\\\\word.txt";
 		File f = new File(path);
 		HashMap<String,Integer> h = new HashMap<String,Integer>();
 		Scanner s = new Scanner(f);
